@@ -147,7 +147,7 @@ function getBook(id) {
 
 const books = getBook(2);
 
-const {title, author, genres} = books;
+const {title, author, genres, pages, publicationDate, hasMovieAdaptation} = books;
 
-console.log(title, author, genres );
+console.log(title, author);
 
