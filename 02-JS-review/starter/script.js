@@ -149,5 +149,13 @@ const books = getBook(2);
 
 const {title, author, genres, pages, publicationDate, hasMovieAdaptation} = books;
 
-console.log(title, author);
+console.log(books);
+
+const [primeGenre, secondGenre, ...otherGs] = genres;
+
+console.log(primeGenre, secondGenre, otherGs );
+
+// Spread operator
+
+
 
