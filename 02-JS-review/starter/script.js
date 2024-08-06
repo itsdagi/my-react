@@ -145,7 +145,7 @@ function getBook(id) {
 
 // Destructuring 
 
-const books = getBook(2);
+const books =getBook(3);
 
 const {title, author, genres, pages, publicationDate, hasMovieAdaptation} = books;
 
@@ -157,5 +157,27 @@ console.log(primeGenre, secondGenre, otherGs );
 
 // Spread operator
 
+const newGs = [...genres, 'epic fantasy'];
 
+ newGs;
 
+const updatedBook = {...books, moviePblicationDate: '2022-01-01'};
+updatedBook
+
+const summary = `${title} a ${pages} page long written by ${author} and publicshed ${publicationDate} book`;
+
+summary;
+
+console.log(true && "Some string");
+console.log(false && "short circute")
+
+console.log(hasMovieAdaptation && "has movie adaptation");
+
+function getTotalReviewCount(books){
+  const goodreads = books.reviews.goodreads.reviewsCount;
+  const librarything = books.reviews.librarything?.reviewsCount;
+
+  return (goodreads + librarything);
+}
+
+console.log(getTotalReviewCount(books));
