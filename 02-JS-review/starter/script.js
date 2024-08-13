@@ -143,41 +143,48 @@ function getBook(id) {
   return data.find((d) => d.id === id);
 }
 
-// Destructuring 
+// // Destructuring 
 
-const books =getBook(3);
+// const books =getBook(3);
 
-const {title, author, genres, pages, publicationDate, hasMovieAdaptation} = books;
+// const {title, author, genres, pages, publicationDate, hasMovieAdaptation} = books;
 
-console.log(books);
+// console.log(books);
 
-const [primeGenre, secondGenre, ...otherGs] = genres;
+// const [primeGenre, secondGenre, ...otherGs] = genres;
 
-console.log(primeGenre, secondGenre, otherGs );
+// console.log(primeGenre, secondGenre, otherGs );
 
-// Spread operator
+// // Spread operator
 
-const newGs = [...genres, 'epic fantasy'];
+// const newGs = [...genres, 'epic fantasy'];
 
- newGs;
+//  newGs;
 
-const updatedBook = {...books, moviePblicationDate: '2022-01-01'};
-updatedBook
+// const updatedBook = {...books, moviePblicationDate: '2022-01-01'};
+// updatedBook
 
-const summary = `${title} a ${pages} page long written by ${author} and publicshed ${publicationDate} book`;
+// const summary = `${title} a ${pages} page long written by ${author} and publicshed ${publicationDate} book`;
 
-summary;
+// summary;
 
-console.log(true && "Some string");
-console.log(false && "short circute")
+// console.log(true && "Some string");
+// console.log(false && "short circute")
 
-console.log(hasMovieAdaptation && "has movie adaptation");
+// console.log(hasMovieAdaptation && "has movie adaptation");
 
-function getTotalReviewCount(books){
-  const goodreads = books.reviews.goodreads.reviewsCount;
-  const librarything = books.reviews.librarything?.reviewsCount;
+// function getTotalReviewCount(books){
+//   const goodreads = books.reviews.goodreads.reviewsCount;
+//   const librarything = books.reviews.librarything?.reviewsCount ?? 0;
+  
+//   return (goodreads + librarything);
+// }
 
-  return (goodreads + librarything);
-}
+// console.log(getTotalReviewCount(books));
 
-console.log(getTotalReviewCount(books));
+const books = getBooks();
+
+const x = [1,2,3,4].map((el) => el*2);
+
+console.log(x)
+
