@@ -188,3 +188,19 @@ const x = [1,2,3,4].map((el) => el*2);
 
 console.log(x)
 
+const titles = books.map((book) => book.title)
+console.log(titles)
+
+const ess = books.map((book)=>({
+  title: book.title,
+  author: book.author
+}))
+
+ess;
+
+
+const longBooks = books
+.filter((book)=> (book.pages > 500))
+.filter((book) => book.hasMovieAdaptation)
+
+console.log(longBooks);
