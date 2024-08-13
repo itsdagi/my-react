@@ -182,25 +182,88 @@ function getBook(id) {
 
 // console.log(getTotalReviewCount(books));
 
-const books = getBooks();
+// const books = getBooks();
 
-const x = [1,2,3,4].map((el) => el*2);
+// const x = [1,2,3,4].map((el) => el*2);
 
-console.log(x)
+// console.log(x)
 
-const titles = books.map((book) => book.title)
-console.log(titles)
+// const titles = books.map((book) => book.title)
+// console.log(titles)
 
-const ess = books.map((book)=>({
-  title: book.title,
-  author: book.author
-}))
+// const ess = books.map((book)=>({
+//   title: book.title,
+//   author: book.author
+// }))
 
-ess;
+// ess;
 
 
-const longBooks = books
-.filter((book)=> (book.pages > 500))
-.filter((book) => book.hasMovieAdaptation)
+// const longBooks = books
+// .filter((book)=> (book.pages > 500))
+// .filter((book) => book.hasMovieAdaptation)
 
-console.log(longBooks);
+// console.log(longBooks);
+
+// const advBooks = books.filter((book) => 
+
+// book.genres.includes("adventure")
+
+// ).map((book) => book.title)
+
+// console.log(advBooks);
+
+
+// const pagesAllBooks = books.reduce((acc, book) => acc + book.pages, 0);
+
+// pagesAllBooks;
+
+// const arr = [9,3,2,4,5,6,1,8,7];
+
+// const sorted = arr.slice().sort((a, b) => a - b);
+// // a - b => ascending order a - b => descending order
+// sorted; // [1,2,3,4,5,6,7,8,9]
+
+// const sortedByPages =  books.slice().sort((a, b) => b.pages - a.pages)
+
+// sortedByPages;
+
+// // 1. add a book object to array 
+
+// const newBook = {
+//   id: 6,
+//   title: "The Hobbit",
+//   publicationDate: "1937-09-21",
+//   author: "J. R. R. Tolkien",
+//   genres: ["fantasy", "adventure"],
+//   hasMovieAdaptation: true,
+// }
+
+// const booksAfterAdd = [...books, newBook];
+
+// booksAfterAdd
+
+// //2. remove a book object from array
+
+// const booksAfterDelete =  books.filter((book => book.id !== 6))
+
+// booksAfterDelete;
+
+// //3. update a book object in array
+
+// const booksAfterUpdate = books.map(book=> book.id ===1 ? {...book, title: "this book"} : book)
+
+// booksAfterUpdate;
+
+
+// fetch("https://jsonplaceholder.typicode.com/posts")
+// .then(res => res.json())
+// .then(data=> console.log(data))
+
+async function getPosts(){
+  const res = fetch("https://jsonplaceholder.typicode.com/posts");
+  const data = (await res).json();
+  console.log(data);
+}
+
+getPosts();
